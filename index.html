@@ -1,118 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
-    <title>freedreno free and open source graphics drivers</title>
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <h1>freedreno</h1>
-        <h2>free/libre and open source driver project for adreno GPUs</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/freedreno" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <h3>Freedreno: free/libre driver project for adreno GPUs</h3>
-
-<p>The freedreno project is a free and open source linux driver for the 2D/3D GPUs in qualcomm snapdragon SoCs.</p>
-
-<p>Today, in the ARM SoC space, binary blob 3d drivers are the biggest impediment to freedom and innovation of the open source community.  You want to run fedora on your tablet/phone/etc?  Sorry, the manufacturer only provides android binaries!  You want to run wayland?  Sorry, there are only X11 binaries (if you are lucky)!  You want to run the latest android pastry?  Sorry, there was an incompatible change between kernel and userspace since the last pastry, and your old binary blobs don't work!</p>
-
-<p>The freedreno project, and others such as <a href="http://limadriver.org/">lima</a>, are aiming to bring a change to this, by providing free/libre and open source alternatives.</p>
-
-<h2>News</h2>
-
-<ul>
-<li>2013-08-25 - getting a bit behind on updating this page.. a2xx and a3xx support is merged in upstream mesa, patches for an upstream drm/kms driver (currently just supporting a3xx + HDMI, although DSI panel support is close to working).  For more up to date news, check the <a href="http://bloggingthemonkey.blogspot.com/">blog</a></li>
-<li>2013-01-19 - xbmc working with gallium driver: <a href="http://bloggingthemonkey.blogspot.com/2013/01/freedreno-gallium-update.html">blog</a></li>
-<li>2012-12-10 - gallium es2gears: <a href="http://www.phoronix.com/scan.php?page=news_item&px=MTI0ODQ">phoronix</a>, <a href="http://bloggingthemonkey.blogspot.com/2012/12/es2gears.html">blog</a></li>
-<li>2012-08-15 - open-src lolscat: <a href="http://www.phoronix.com/scan.php?page=news_item&px=MTE2MTI">phoronix</a>, <a href="http://bloggingthemonkey.blogspot.com/2012/08/open-source-lolscat.html">blog</a></li>
-<li>2012-08-05 - textured cube: <a href="http://www.phoronix.com/scan.php?page=news_item&px=MTE1NDU">phoronix</a>, <a href="http://bloggingthemonkey.blogspot.com/2012/08/textured-cube-fullscreen.html">blog</a></li>
-<li>2012-07-29 - working shader assembler: <a href="http://www.phoronix.com/scan.php?page=news_item&amp;px=MTE0OTU">phoronix</a>, <a href="http://bloggingthemonkey.blogspot.com/2012/07/freedreno-update-first-renders-shader.html">blog</a></li>
-<li>2012-06-30 - rotating cube: <a href="http://www.phoronix.com/scan.php?page=news_item&amp;px=MTEzMDY">phoronix</a></li>
-<li>2012-06-25 - first <a href="renders/index.html">renders</a>: <a href="http://www.phoronix.com/scan.php?page=news_item&amp;px=MTEyNzE">phoronix</a>, <a href="http://bloggingthemonkey.blogspot.com/2012/06/first-renders.html">blog</a></li>
-<li>2012-04-14 - freedreno project announced: <a href="http://www.phoronix.com/scan.php?page=article&amp;item=qualcomm_freedreno&amp;num=1">phoronix</a>, <a href="http://bloggingthemonkey.blogspot.com/2012/04/fighting-back-against-binary-blobs.html">blog</a></li>
-</ul>
-
-
-<h2>Software</h2>
-
-<ul>
-
-<li>
-<a href="https://github.com/freedreno/freedreno">git://github.com/freedreno/freedreno.git</a>
-<ul>
-<li>cmdstream parsing tools</li>
-<li>shader disassembler</li>
-<li>fdre: 3d driver, shader assembler and tests</li>
-</ul>
-</li>
-
-<li>
-<a href="https://github.com/freedreno/xf86-video-freedreno">git://github.com/freedreno/xf86-video-freedreno.git</a>
-<ul>
-<li>x11 driver using 2D core</li>
-</ul>
-</li>
-
-<li>
-<a href="https://github.com/freedreno/mesa">git://github.com/freedreno/mesa.git</a>
-<ul>
-<li>mesa</li>
-</ul>
-</li>
-
-<li>
-<a href="https://github.com/freedreno/libdrm">git://github.com/freedreno/libdrm.git</a>
-<ul>
-<li>libdrm</li>
-</ul>
-</li>
-
-</ul>
-Note: the upstream xf86-video-freedreno/mesa/libdrm trees are part of the <a href="http://cgit.freedesktop.org/">freedesktop.org</a> project.  The github trees are mainly used for work-in-progress stuff.
-
-
-<h2>Documentation/Information</h2>
-
-<ul>
-<li><a href="https://github.com/freedreno/freedreno/wiki">Wiki</a>
-<ul>
-<li><a href="https://github.com/freedreno/freedreno/wiki/Useful-Information">Useful Information</a></li>
-<li><a href="https://github.com/freedreno/freedreno/wiki/Command-Stream-Format">Command Stream Format</a></li>
-<li><a href="https://github.com/freedreno/freedreno/wiki/A2XX-Shader-Instruction-Set-Architecture">A2xx Shader Instruction Set Architecture</a></li>
-<li><a href="https://github.com/freedreno/freedreno/wiki/A3XX-Shader-Instruction-Set-Architecture">A3xx Shader Instruction Set Architecture</a></li>
-</ul>
-<li><a href="renders/index.html">Example Renders and cmdstream dumps</a></li>
-</ul><h2>Related Projects</h2>
-
-<ul>
-<li><a href="http://limadriver.org/">lima</a> - open source GPU drivers for ARM mali GPUs</li>
-<li><a href="https://github.com/grate-driver/grate/wiki">grate</a> - for tegra</li>
-<li><a href="https://github.com/laanwj/etna_viv/wiki">etnaviv</a> - for vivante
-</ul>
-
-
-<h2>Contact</h2>
-
-<p>Join us on <a href="http://freenode.net">freenode</a> in the <a href="irc://irc.freenode.net/#freedreno">#freedreno</a> channel.</p>
-      </section>
-    </div>
-
-    
-  </body>
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="1;url=https://github.com/freedreno/freedreno/wiki">
+        <script type="text/javascript">
+            window.location.href = "https://github.com/freedreno/freedreno/wiki"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow the <a href='https://github.com/freedreno/freedreno/wiki'>link to wiki</a>
+    </body>
 </html>
